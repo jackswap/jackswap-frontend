@@ -7,9 +7,6 @@ import FarmStakingCard from 'views/Home/components/FarmStakingCard'
 import LotteryCard from 'views/Home/components/LotteryCard'
 import CakeStats from 'views/Home/components/CakeStats'
 import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
-import EarnAPYCard from 'views/Home/components/EarnAPYCard'
-import EarnAssetCard from 'views/Home/components/EarnAssetCard'
-import WinCard from 'views/Home/components/WinCard'
 
 const Hero = styled.div`
   align-items: center;
@@ -55,27 +52,6 @@ const Cards = styled(BaseLayout)`
   }
 `
 
-const CTACards = styled(BaseLayout)`
-  align-items: start;
-  margin-bottom: 32px;
-
-  & > div {
-    grid-column: span 6;
-  }
-
-  ${({ theme }) => theme.mediaQueries.sm} {
-    & > div {
-      grid-column: span 8;
-    }
-  }
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    & > div {
-      grid-column: span 4;
-    }
-  }
-`
-
 const Home: React.FC = () => {
   const TranslateString = useI18n()
 
@@ -92,11 +68,6 @@ const Home: React.FC = () => {
           <FarmStakingCard />
           <LotteryCard />
         </Cards>
-        <CTACards>
-          <EarnAPYCard />
-          <EarnAssetCard />
-          <WinCard />
-        </CTACards>
         <Cards>
           <CakeStats />
           <TotalValueLockedCard />

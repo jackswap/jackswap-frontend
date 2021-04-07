@@ -1,12 +1,22 @@
 {
-  "short_name": "PancakeSwap",
-  "name": "PancakeSwap",
-  "description": "Farm CAKE with Pancake LP Tokens",
+  "short_name": "JackSwap",
+  "name": "JackSwap",
+  "description": "Farm JACK with Jackswap LP Tokens",
   "icons": [
     {
       "src": "favicon.ico",
       "type": "image/x-icon",
-      "sizes": "256x256"
+      "sizes": "128x128"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x212"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ],
   "start_url": ".",
