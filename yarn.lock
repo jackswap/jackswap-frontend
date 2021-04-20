@@ -8195,10 +8195,10 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
-jackswap-uikit@^0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/jackswap-uikit/-/jackswap-uikit-0.21.0.tgz#b8dd5976b5a5610cbc089c4d1147c0791f0d61ad"
-  integrity sha512-ULaz+xptFw1JSVyaJ+k7AwLMGHnUhkhfYiAmLnGfc58Deoh71NZdU2AO7a6N92Hq1V+VYlEieVLPiWNP3wQSbg==
+jackswap-uikit@^0.22.0:
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/jackswap-uikit/-/jackswap-uikit-0.22.0.tgz#446c1551bdfd296a4e262daa52cef02a1e2ac55a"
+  integrity sha512-2ADycVGnctFqpsERAg7rr1OJAzk/UL/MrNwUs3gaDBLwSgObh+ap4MCHtWxBg6GuctdOePP7CaXjHEoFjc2tnQ==
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"
