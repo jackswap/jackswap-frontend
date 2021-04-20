@@ -20,8 +20,11 @@ jobs:
           node-version: 14
       - name: Set up environment
         run: |
-          echo $PRIVATE_KEY > key
-          chmod 0600 key
+          mkdir -p ~/.ssh
+          echo $PRIVATE_KEY > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          ssh-keyscan git.eu.s5y.io >> ~/.ssh/known_hosts
           echo -n > .env.production
           echo REACT_APP_CHAIN_ID=97 >> .env.production
           echo REACT_APP_NODE_1=https://data-seed-prebsc-1-s1.binance.org:8545 >> .env.production
