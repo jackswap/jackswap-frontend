@@ -96,7 +96,7 @@ const config: MenuEntry[] = [
       // },
       {
         label: 'Github',
-        href: 'https://github.com/jackswao',
+        href: 'https://github.com/jackswap',
       },
       // {
       //   label: 'Docs',
