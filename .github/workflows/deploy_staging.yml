@@ -21,6 +21,7 @@ jobs:
       - name: Set up environment
         run: |
           echo $PRIVATE_KEY > key
+          chmod 0600 key
           echo -n > .env.production
           echo REACT_APP_CHAIN_ID=97 >> .env.production
           echo REACT_APP_NODE_1=https://data-seed-prebsc-1-s1.binance.org:8545 >> .env.production
@@ -33,6 +34,6 @@ jobs:
       - name: Deploy
         run: |
           tar -C build -czf web.tar.gz .
-          scp -i ./key web.tar.gz $USER@$IP:/tmp  -o UserKnownHostsFile=/github/home/.ssh/known_hosts
-          ssh -i ./key $USER@$IP -o UserKnownHostsFile=/github/home/.ssh/known_hosts sudo rm -rf /var/www/web/*
-          ssh -i ./key $USER@$IP -o UserKnownHostsFile=/github/home/.ssh/known_hosts sudo tar -C /var/www/web -xzf /tmp/web.tar.gz
+          scp -i ./key web.tar.gz $USER@$IP:/tmp
+          ssh -i ./key $USER@$IP sudo rm -rf /var/www/web/*
+          ssh -i ./key $USER@$IP sudo tar -C /var/www/web -xzf /tmp/web.tar.gz
