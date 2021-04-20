@@ -37,6 +37,6 @@ jobs:
       - name: Deploy
         run: |
           tar -C build -czf web.tar.gz .
-          scp -i ./key web.tar.gz $USER@$IP:/tmp
-          ssh -i ./key $USER@$IP sudo rm -rf /var/www/web/*
-          ssh -i ./key $USER@$IP sudo tar -C /var/www/web -xzf /tmp/web.tar.gz
+          scp -i ~/.ssh/id_rsa web.tar.gz $USER@$IP:/tmp
+          ssh -i ~/.ssh/id_rsa $USER@$IP sudo rm -rf /var/www/web/*
+          ssh -i ~/.ssh/id_rsa $USER@$IP sudo tar -C /var/www/web -xzf /tmp/web.tar.gz
